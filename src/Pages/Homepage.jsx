@@ -8,9 +8,13 @@ import Map from '../Components/Map'
 import Aboutus from '../Components/Aboutus'
 import ImageSlider from '../Components/ImageSlider'
 import { Link } from "react-router-dom";
-
+import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
 
 function Homepage() {
+  const openWhatsApp = () => {
+    window.location.href = 'https://wa.me/918340782899';
+  };
+
   return (
     <div className='h-full bg-gradient-to-r from-blue-900 to-purple-400 text-slate-200 '>
        <Navbar  />
@@ -24,6 +28,9 @@ function Homepage() {
           </div>
           </Link>
         </button>
+        <div className="relative z-10" onClick={openWhatsApp}>
+          <AiOutlineWhatsApp className="text-4xl fixed bottom-2 left-2" />
+        </div>
       <Card />
       <Map />
       <Aboutus />
