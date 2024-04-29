@@ -26,7 +26,7 @@ export function Card() {
     <div className="flex flex-row overflow-x-scroll"  style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
       {properties.map((property) => (
         <div key={property.PropertyNumber} className="flex-none m-4">
-          <BackgroundGradient className="rounded-[22px] w-[400px] overflow-hidden bg-white dark:bg-zinc-900">
+          <BackgroundGradient className="rounded-[22px] md:w-[400px]  w-[250px] overflow-hidden bg-white dark:bg-zinc-900">
             <Carousel
               showThumbs={false}
               showStatus={false}

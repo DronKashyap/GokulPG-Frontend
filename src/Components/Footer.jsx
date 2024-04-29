@@ -11,7 +11,7 @@ function Footer() {
   };
 
   return (
-    <div className="bg-gray-800 text-white p-4">
+    <div className="bg-gray-800 relative z-10 text-white p-4">
       <div className="flex justify-center items-center space-x-4">
         <div className="flex items-center cursor-pointer" onClick={openMail}>
           <AiOutlineMail className="text-2xl" />

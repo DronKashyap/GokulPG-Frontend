@@ -13,10 +13,10 @@ function Navbar() {
   return (
     <div className=' h-16  md:text-xl text-xs flex justify-between p-2'>
       <div className='flex justify-around'>
-       <img src={logo} className='h-12 rounded-full mr-5'></img>
-       <a href="/" className='p-3 hover:bg-blue-500  hover:rounded-xl'>Home</a>
-      <a href="/Blog" className='p-3  hover:bg-blue-500 hover:rounded-xl'>Blog</a>
-      <a href="/properties" className='p-3  hover:bg-blue-500 hover:rounded-xl'>Properties</a>
+       <img src={logo} className='h-12 rounded-full md:mr-5 mr-1'></img>
+       <a href="/" className='md:p-3 p-1 hover:bg-blue-500  hover:rounded-xl'>Home</a>
+      <a href="/Blog" className='md:p-3 p-1 hover:bg-blue-500 hover:rounded-xl'>Blog</a>
+      <a href="/properties" className='md:p-3  p-1 hover:bg-blue-500 hover:rounded-xl'>Properties</a>
   
        </div>      
        <div className='flex'> 
