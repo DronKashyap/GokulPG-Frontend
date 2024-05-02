@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from "framer-motion";
 import { BackgroundGradient } from "./ui/Gradientbgcard";
 import { Link } from "react-router-dom";
 import { Carousel } from 'react-responsive-carousel';
@@ -26,7 +25,8 @@ export function Card() {
     <div className="flex flex-row overflow-x-scroll"  style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
       {properties.map((property) => (
         <div key={property.PropertyNumber} className="flex-none m-4">
-          <BackgroundGradient className="rounded-[22px] md:w-[400px]  w-[250px] overflow-hidden bg-white dark:bg-zinc-900">
+          <BackgroundGradient className="rounded-[22px] md:w-[400px]  w-[250px] overflow-hidden bg-white dark:bg-zinc-900">   
+          <Link key={property.PropertyNumber} to={`/property/${property._id}`}>
             <Carousel
               showThumbs={false}
               showStatus={false}
@@ -53,10 +53,7 @@ export function Card() {
               <p>Triple Seater Room Price: Rs. {property.TripleSeaterRoomPrice}</p>
             </div>
 
-            <Link key={property.PropertyNumber} to={`/property/${property._id}`}>
-              <button className="rounded-full pl-4  ml-40 justify-center mb-4 pr-4 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold hover:bg-zinc-800 dark:bg-zinc-800">
-                View
-              </button>
+
             </Link>
           </BackgroundGradient>
         </div>

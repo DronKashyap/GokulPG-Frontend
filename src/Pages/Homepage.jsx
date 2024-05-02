@@ -8,7 +8,7 @@ import Map from '../Components/Map'
 import Aboutus from '../Components/Aboutus'
 import ImageSlider from '../Components/ImageSlider'
 import { Link } from "react-router-dom";
-import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
+import whatsapplogo from '../Static/whatsapplogo.svg';
 
 function Homepage() {
   const openWhatsApp = () => {
@@ -20,7 +20,7 @@ function Homepage() {
        <Navbar  />
       <Banner />
       <ImageSlider />
-        <button className="p-[3px] fixed bottom-0 right-0 z-0 m-5">
+        <button className="p-[3px] fixed bottom-0 right-0 z-10 m-0">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
           <Link to='/book'>
           <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
@@ -29,7 +29,7 @@ function Homepage() {
           </Link>
         </button>
         <div className="relative z-10" onClick={openWhatsApp}>
-          <AiOutlineWhatsApp className="text-4xl fixed bottom-2 left-2" />
+         <img src={whatsapplogo}  className="h-10 fixed bottom-2 left-2" alt="WhatsApp" />
         </div>
       <Card />
       <Map />
